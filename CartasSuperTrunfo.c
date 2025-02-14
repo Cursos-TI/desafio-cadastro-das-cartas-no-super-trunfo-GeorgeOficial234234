@@ -38,12 +38,17 @@ int main() {
 
     printf("\nDigite a quantidade de Pontos Turísticos\n");
     scanf("%d", &pntsTurist);
+
+    //Calculando a Densidade Demográfica e o PIB per capita
+    float densidadeDemografica = (float) populacao / area;
+    float pibPerCapita = (float) pib / populacao;
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     printf("\nCódigo da cidade: %c0%d \nNome da cidade: %s \nNúmero de habitantes: %d \n", codLetra, codNum, nome, populacao);
-    printf("Área da cidade: %2.f \nPIB da cidade : %3.f \nPontos Turísticos: %d \n", area, pib, pntsTurist);
+    printf("Área da cidade: %f \nPIB da cidade : %f \nPontos Turísticos: %d \n", area, pib, pntsTurist);
+    printf("Densidade Demográfica: %f \nPib per capita %f", densidadeDemografica, pibPerCapita);
 
     return 0;
 }
